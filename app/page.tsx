@@ -10,7 +10,7 @@ export default function Chat() {
       <header className="text-center">
         <div className="text-2xl font-extrabold ...">
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
-            Larry
+            LarrY AI
           </span>
         </div>
       </header>
