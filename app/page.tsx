@@ -1,21 +1,25 @@
 'use client';
- 
+
 import { useChat } from 'ai/react';
 import Markdown from 'react-markdown';
 export default function Chat() {
   const { messages, input, handleInputChange, handleSubmit, data } = useChat();
- 
+
   return (
     <div className="p-8 border-2 border-black h-screen bg-gradient-to-b from-neutral-100 to-neutral-300">
       <header className="text-center">
-        <h1 className="text-xl">Resource Helper</h1>
+        <div class="text-2xl font-extrabold ...">
+          <span class="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
+            Larry
+          </span>
+        </div>
       </header>
       <div className="flex flex-col justify-between w-full max-w-md mx-auto h-full">
         <div id='messages' className="flex-grow overflow-y-auto max-h-96 my-4 rounded bg-neutral-100 border-t-2 border-b-2 border-b-gray-300">
           {messages.map(m => (
             <div key={m.id} className="whitespace-pre-wrap p-1">
               <span className="text-blue-500">{m.role === 'user' ? 'You: ' : 'AI: '}</span>
-              <Markdown children={m.content}/>
+              <Markdown children={m.content} />
             </div>
           ))}
         </div>
