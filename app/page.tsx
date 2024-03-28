@@ -8,8 +8,8 @@ export default function Chat() {
   return (
     <div className="p-8 border-2 border-black h-screen bg-gradient-to-b from-neutral-100 to-neutral-300">
       <header className="text-center">
-        <div class="text-2xl font-extrabold ...">
-          <span class="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
+        <div className="text-2xl font-extrabold ...">
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
             Larry
           </span>
         </div>
@@ -19,7 +19,7 @@ export default function Chat() {
           {messages.map(m => (
             <div key={m.id} className="whitespace-pre-wrap p-1">
               <span className="text-blue-500">{m.role === 'user' ? 'You: ' : 'AI: '}</span>
-              <Markdown children={m.content} />
+              <Markdown>{m.content}</Markdown>
             </div>
           ))}
         </div>

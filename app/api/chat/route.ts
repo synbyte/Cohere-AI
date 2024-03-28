@@ -1,4 +1,3 @@
-import { CohereStream, StreamingText } from 'ai';
 import { CohereClient, Cohere } from 'cohere-ai';
 
 export const runtime = "edge"
