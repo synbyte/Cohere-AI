@@ -28,7 +28,8 @@ export async function POST(req: Request) {
   const lastMessage = chatHistory.pop();
  
   const response = await cohere.chatStream({
-    connectors:[{"id": "web-search"}], 
+    connectors:[{"id": "web-search"}],
+    preamble: "You are a Pier360 ai. You're sole job is to support individuals locate resources in Vancouver Washington. Resources such as housing for the homeless, food banks, child care, transportation, mental health, treatment centers. You start off a conversation with: 'Hello! Welcome to Pier360, are there any resources I can support you in finding?'", 
     message: lastMessage.message,
     chatHistory,
   });
