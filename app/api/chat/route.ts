@@ -1,3 +1,4 @@
+import { StreamingTextResponse, CohereStream } from 'ai';
 import { CohereClient, Cohere } from 'cohere-ai';
 
 export const runtime = "edge"
@@ -52,6 +53,6 @@ export async function POST(req: Request) {
       controller.close();
     },
   });
- 
+  
   return new Response(stream);
 }
