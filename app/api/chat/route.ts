@@ -19,7 +19,7 @@ const toCohereRole = (role: string): Cohere.ChatMessageRole => {
 };
  
 export async function POST(req: Request) {
-  try {
+  
   // Extract the `prompt` from the body of the request
   const { messages } = await req.json();
   const chatHistory = messages.map((message: any) => ({
@@ -60,7 +60,5 @@ export async function POST(req: Request) {
   });
   
   return new StreamingTextResponse(stream);
-} catch (error) {
-  console.error("Caught Error: ,", error);
-}
+
 }

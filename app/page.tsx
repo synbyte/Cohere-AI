@@ -37,7 +37,7 @@ export default function Chat() {
 
         <p>
           This AI is still in development. Please let me know of any bugs or inconsistencies that may come up.</p>
-          <br/><p>Start by typing what you're looking for; <i>"I need housing resources", "What services do you have for veterans?", "I need a hot meal".</i> Or just simply say hi!</p>
+          <br/><p>Start by typing what you&#39;re looking for; <i>&quot;I need housing resources&quot;, &quot;What services do you have for veterans?&quot;, &quot;I need a hot meal&quot;.</i> Or just simply say hi!</p>
 
         <button className='rounded-lg shadow-md bg-neutral-300 p-2' onClick={() => setIsOpen(false)}>Close</button>
         
