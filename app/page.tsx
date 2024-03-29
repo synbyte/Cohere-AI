@@ -8,7 +8,7 @@ import Markdown from 'react-markdown';
 export default function Chat() {
   const { messages, input, handleInputChange, handleSubmit, data } = useChat();
   useEffect(() => {
-    const chatContainer = document.getElementById('messages');
+    const chatContainer: any = document.getElementById('messages');
     chatContainer.scrollTop = chatContainer?.scrollHeight;
   }, [messages]);
   return (
