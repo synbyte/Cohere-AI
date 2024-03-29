@@ -42,17 +42,18 @@ export async function POST(req: Request) {
     message: lastMessage.message,
     chatHistory,
   });
- 
+  const encoder = new TextEncoder();
   const stream = new ReadableStream({
     async start(controller) {
       for await (const event of response) {
         if (event.eventType === 'text-generation') {
-          controller.enqueue(event.text);
+          controller.enqueue(encoder.encode(event.text));
         }
       }
       controller.close();
     },
   });
   
-  return new Response(stream);
+
+  return new StreamingTextResponse(stream);
 }
