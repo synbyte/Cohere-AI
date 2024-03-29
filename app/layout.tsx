@@ -1,6 +1,7 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Quicksand } from 'next/font/google';
+import Head from 'next/head';
 
 const quicksand = Quicksand({
   subsets: ["latin"],
@@ -19,6 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html className={quicksand.className} lang="en">
+      <Head><title>PeerAssist</title></Head>
       <body >{children}</body>
     </html>
   );
