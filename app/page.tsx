@@ -5,6 +5,7 @@ import { useChat } from 'ai/react';
 import Markdown from 'react-markdown';
 import { Dialog } from '@headlessui/react';
 
+
 export default function Chat() {
   
   const [isOpen, setIsOpen] = useState(true);
@@ -18,6 +19,7 @@ export default function Chat() {
   
   return (
     <div className="p-8 pb-20 border-2 h-full bg-gradient-to-b from-neutral-100 via-cyan-100 to-neutral-300">
+      
       <header className="text-center">
         <div className="text-xl font-extrabold ...">
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
