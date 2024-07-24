@@ -24,7 +24,7 @@ export default function Chat() {
         <div className="text-xl font-extrabold ...">
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
             
-          <Image className='mx-auto' width={150} height={100} src='/p360.png'></Image> 
+          <Image className='mx-auto' width={150} height={100} src='/p360.png' alt='Pier360 logo'></Image> 
           </span>
           
         </div>
