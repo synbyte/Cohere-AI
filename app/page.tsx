@@ -4,7 +4,7 @@ import { Raleway } from 'next/font/google';
 import { useChat } from 'ai/react';
 import Markdown from 'react-markdown';
 import { Dialog } from '@headlessui/react';
-
+import Image from 'next/image'
 
 export default function Chat() {
   
@@ -23,16 +23,16 @@ export default function Chat() {
       <header className="text-center">
         <div className="text-xl font-extrabold ...">
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">
-            PeerAssist
+            
+          <Image className='mx-auto' width={150} height={100} src='/p360.png'></Image> 
           </span>
-          
           
         </div>
       </header>
       <Dialog id='dialog' open={isOpen} onClose={() => setIsOpen(false)}>
       <div className='fixed inset-0 flex w-screen text-center items-center justify-center p-4 '>
       <Dialog.Panel className="w-full max-w-sm rounded-xl bg-neutral-300 p-5 shadow-2xl">
-        <Dialog.Title>Welcome to PeerAssist</Dialog.Title>
+        <Dialog.Title>Pier360 AI</Dialog.Title>
         <Dialog.Description>
           
         </Dialog.Description>
